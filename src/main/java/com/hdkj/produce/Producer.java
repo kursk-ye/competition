@@ -35,12 +35,11 @@ public class Producer {
     LocalDateTime todayWeeHours = LocalDateTime.of(today, weeHoursTime);
     ZonedDateTime todayZoneDateTime = todayWeeHours.atZone(ZoneId.of("Asia/Shanghai"));
     long eventTS = todayZoneDateTime.toInstant().toEpochMilli();
-    long writeTS = System.currentTimeMillis();
 
     int writeShardId = 0;
 
     for (int i = 0; i <= count; i++) {
-      Sign sign = new Sign(eventTS + i * interval,writeTS);
+      Sign sign = new Sign(eventTS + i * interval,System.currentTimeMillis());
       ObjectMapper objectMapper = new ObjectMapper();
       String strSign = objectMapper.writeValueAsString(sign);
 
