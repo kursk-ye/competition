@@ -6,3 +6,9 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+!/jarRepositories.xml
+!/vcs.xml
+!/google-java-format.xml
+!/compiler.xml
+!/intellij-javadocs-4.0.1.xml
+!/misc.xml
