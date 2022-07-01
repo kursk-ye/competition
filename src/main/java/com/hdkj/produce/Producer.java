@@ -24,7 +24,7 @@ import java.util.List;
 public class Producer {
   private static DatahubClientCreater datahubClientCreater;
   private static final int shardTotal = GlobalParameter.shardTotal;
-  private int count = 100000;
+  private int count = 144;
   private long interval = 1_000L * 60 * 10;
 
   public void run() throws JsonProcessingException {
